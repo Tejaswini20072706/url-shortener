@@ -31,6 +31,9 @@ app.use('/api/url', urlRoutes);
 // Redirect route — handles GET /:shortCode at root level
 // Must come after API routes to avoid conflicts
 app.get('/:shortCode', redirectUrl);
+app.get("/", (req, res) => {
+  res.send("URL Shortener API is running 🚀");
+});
 
 // ---------- Error Handling ----------
 
